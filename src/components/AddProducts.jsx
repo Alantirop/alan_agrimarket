@@ -113,7 +113,7 @@ const AddProducts = () => {
                         <option value="poultry">poultry</option>
                         <option value="cattle">cattle</option>
                         <option value="crops">crops</option>
-                        <option value="farm equipment">farm equpiment</option>
+                        <option value="equipment">equpiment</option>
 
                     </select> <br />
 
