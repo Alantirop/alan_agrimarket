@@ -133,6 +133,30 @@ const Products = () => {
                         </div>
                     </div>
                 ))}
+
+
+
+                <h2 className="text-center my-2 p-4 bg-dark text-white">cattle</h2>
+                {cattle.map((product) => (
+                    <div className="col-md-4 mb-4" key={product.product_id}>
+                        <div className="card shadow h-100">
+                            <img src={img_url + product.product_image} alt="" className="product_img mt-4" />
+
+                            <div className="card-body">
+                                <h5 className="card-title">{product.product_name}</h5>
+                                <p className=" text-muted small">{product.product_description}</p>
+                                <p className="text-warning ">KES: {product.product_cost}</p>
+                                <p className="text-muted small"><strong>Category:</strong> {product.product_category}</p>
+                                <button
+                                    className="btn btn-dark "
+                                    onClick={() => navigate("/makepayment", { state: { product } })}
+                                >
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
